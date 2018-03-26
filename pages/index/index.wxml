@@ -17,7 +17,7 @@
 <!-- 点击事件-->
   <button class='btn' bindtap='show'>toast</button>
 <!-- 页面跳转-->
-  <button class='login' bindtap='login'>登录</button>
+  <button class='login' bindtap='login'>登录222</button>
 <!-- swiper-->
   <button class='swiper--' bindtap='swiperTest'>swiperTest</button>
 
