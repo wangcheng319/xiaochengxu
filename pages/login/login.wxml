@@ -1,20 +1,106 @@
-<!--pages/login/login.wxml-->
-<view>
-  <view class='name_lable'>
-    <text class='name_text'>用户名：</text>
-    <input class='name_input' bindinput='inputvalue' value='请输入用户名' maxlength='5'></input>
-  </view>
-  <view class='passwd_lable'>
-    <text class='passwd_text'>密码：</text>
-    <input class='passwd_input' value='请输入密码'></input>
-  </view>
- 
-  <image src='../images/test.png' class='img' ></image>
 
-  
-  
-  <button class='btn_login' bindtap='login'>点击登录</button>
+<view class='main'>
+<!--banner  -->
+ <swiper 
+        class='banner'
+        indicator-dots='{{indicatorDots}}'
+        autoplay='{{autoplay}}'
+        interval='{{interval}}'
+        circular='{{circular}}'>
 
-  <view>{{value}}</view>
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper> 
+<!--banner下面3个按钮  -->
+<view class='banner_bottom'>
+  <view class='banner_bottom_view'>
+    <image src='../images/ic_detail_blue.png' class='banner_bottom_view_img'></image>
+    <text>买新车</text>
+  </view>
+  <view class='banner_bottom_view'>
+     <image src='../images/ic_detail_blue.png' class='banner_bottom_view_img'></image>
+    <text>买二手车</text>
+  </view>
+  <view class='banner_bottom_view'>
+     <image src='../images/ic_detail_blue.png' class='banner_bottom_view_img'></image>
+    <text>申请贷款</text>
+  </view>
+</view>
+<!--表格  -->
+<view class='grid_view'>
+  <view class='grid_view_title'>
+    <view class='grid_view_line'>
+    </view>
+    <textarea class='grid_view_title_text'>
+      主打车型
+    </textarea>
+  </view>
+
+  <view class='gird'>
+    <view class='grid_row'>
+      <view class='banner_bottom_view'>
+         <image src='{{arrys[0].url}}' class='banner_bottom_view_img'></image>
+         <text>{{arrys[0].text1}}</text>
+      </view>
+      <view class='banner_bottom_view'>
+         <image src='../images/ic_detail_blue.png' class='banner_bottom_view_img'></image>
+         <text>买新车</text>
+      </view>
+      <view class='banner_bottom_view'>
+         <image src='../images/ic_detail_blue.png' class='banner_bottom_view_img'></image>
+         <text>买新车</text>
+      </view>
+    </view >
+    <view class='grid_row'>
+      <view class='banner_bottom_view'>
+         <image src='../images/ic_detail_blue.png' class='banner_bottom_view_img'></image>
+         <text>买新车</text>
+      </view>
+      <view class='banner_bottom_view'>
+         <image src='../images/ic_detail_blue.png' class='banner_bottom_view_img'></image>
+         <text>买新车</text>
+      </view>
+      <view class='banner_bottom_view'>
+         <image src='../images/ic_detail_blue.png' class='banner_bottom_view_img'></image>
+         <text>买新车</text>
+      </view>
+    </view>
+  
+  </view>
+
+</view>
+
+  <view class='grid_view_title'>
+    <view class='grid_view_line'>
+    </view>
+    <textarea class='grid_view_title_text'>
+      热销车型
+    </textarea>
+  </view>
+
+<!--列表  -->
+<block wx:for="{{arrys}}" wx:key="">
+  <!--普通实现  -->
+    <view class='item_main' bindtap='itemclick' data-id='{{item.id}}' data-='{{item}}'>
+    <image src='{{item.url}}' class='item_img'>
+    </image>
+
+  <view class='item_right'>
+    <view class='item_right_top'>
+      <text class='item_right_top_text1'>{{item.text1}}</text>
+      <text class='item_right_top_text1'>{{item.text2}}</text>
+      <text class='item_right_top_text1'>{{item.text3}}</text>
+      <view class='item_right_bottom'>
+        <text class='item_right_bottom_text'>{{item.text4}}</text>
+        <text class='item_right_bottom_text'>{{item.text5}}</text>
+      </view>
+    </view>
+  </view>
+</view> 
+   <view class='item_line'></view>
+</block>
 
 </view>

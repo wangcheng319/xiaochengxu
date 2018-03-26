@@ -1,37 +1,151 @@
 /* pages/login/login.wxss */
-.name_lable{
+.main{
   display: flex;
-  flex-direction: row;
-  border: 10px;
-  border-color: #f6f;
+  flex-direction: column;
+  flex: 1;
 }
 
-
-.passwd_lable{
-  display: flex;
-  background-color: #f6f;
-  flex-direction: row;
-  margin-top: 32px;
+.banner{
+  height: 150px;
+  width: 100%;
 }
 
-.btn_login{
+.slide-image{
+ width: 100%;
+}
+
+.banner_bottom{
   display: flex;
-  flex: row;
-  color: #f6f;
-  width: 100px;
-  height: 50px;
-  justify-content: center;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 16px
+}
+
+.banner_bottom_view{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   align-items: center;
 }
 
-.img{
+.banner_bottom_view_img{
+  width: 20px;
+  height: 20px;
+}
+
+.grid_view{
   display: flex;
-  margin: 10px;
+  flex-direction: column;
   flex: 1;
 }
 
-.image_top{
+.grid_view_title{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 30px;
+  align-items: center;
+}
+
+.grid_view_line{
+  width: 3px;
+  height: 15px;
+  background: #157EFB;
+}
+
+.grid_view_title_text{
+  font-size: 16px;
+  margin-left: 5px;
+  color: #157EFB;
+  height: 30px;
   display: flex;
   flex: 1;
-  background-color: blue;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*表格  */
+.grid{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.grid_row{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8px;
+}
+
+
+.item_main{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  padding: 10px;
+  align-items: center;
+  
+}
+
+.item_img{
+  display: flex;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.item_right{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+.item_right_top{
+  display: flex;
+  flex-direction: column;
+}
+
+.item_right_top_text1{
+  font-size: 18px;
+  color: black;
+
+}
+
+.item_right_top_text2{
+  font-size: 16px;
+  color: black;
+}
+
+.item_right_top_text3{
+  font-size: 14px;
+  color: gray;
+}
+
+
+.item_right_bottom{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.item_right_bottom_text{
+  font-size: 14px;
+  color: red;
+}
+
+.item_line{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background: #f5f5f5;
+  height: 1px;
+  margin-left: 16px;
+  margin-top: 8px;
 }

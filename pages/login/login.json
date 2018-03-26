@@ -6,6 +6,9 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
-  }
+  },
+    "usingComponents": {
+      "listitem": "../listitem/listitem"
+    }
 
 }

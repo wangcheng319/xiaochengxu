@@ -8,14 +8,68 @@ Page({
    name:"张三",
    age:"3",
    value:"",
+   arrys:[],
+// banner
+   indicatorDots: true,
+   autoplay: true,
+   interval: 3000,
+   circular: true,
+   imgUrls: [
+     'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+     'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+     'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
+     'http://img2.imgtn.bdimg.com/it/u=3536010007,3739875767&fm=27&gp=0.jpg',
+   ],  
   },
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showToast({
-      title: 'onLoad',
+    console.log("onLoad")
+    //模拟网络请求获取数据
+    var data = [
+      {
+        url: "../images/test.png",
+        text1: '奔驰C200L',
+        text2: '2018款 旗舰型',
+        text3: '厂商指导价：8万',
+        text4: '首付0元',
+        text5: '分期100元',
+        id: '1',
+      },
+      {
+        url: "../images/test.png",
+        text1: '奔驰C200L',
+        text2: '2018款 旗舰型',
+        text3: '厂商指导价：8万',
+        text4: '首付0元',
+        text5: '分期100元',
+        id: '2',
+      },
+      {
+        url: "../images/test.png",
+        text1: '奔驰C200L',
+        text2: '2018款 旗舰型',
+        text3: '厂商指导价：8万',
+        text4: '首付0元',
+        text5: '分期100元',
+        id: '3',
+      }, {
+        url: "../images/test.png",
+        text1: '奔驰C200L',
+        text2: '2018款 旗舰型',
+        text3: '厂商指导价：8万',
+        text4: '首付0元',
+        text5: '分期100元',
+        id: '1',
+      },
+    ]
+    this.setData({
+      arrys: data
     })
   },
 
@@ -23,37 +77,29 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.showToast({
-      title: 'onReady',
-    })
+    console.log("onReady")
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.showToast({
-      title: 'onShow',
-    }),
-    console.log(this.data.name)
+
+    console.log("onShow")
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    wx.showToast({
-      title: 'onHide',
-    })
+    console.log("onHide")
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    wx.showToast({
-      title: 'onUnload',
-    })
+    console.log("onUnload")
   },
 
   /**
@@ -69,9 +115,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    wx.showToast({
-      title: 'onReachBottom',
-    })
+    console.log("onReachBottom")
   },
 
   /**
@@ -99,5 +143,15 @@ Page({
     this.setData({
       value:e.detail.value
     })
-  }
+  },
+  /**
+   * 点击列表
+   */
+  itemclick: function (e) {
+    
+    var idx = e.currentTarget.dataset;
+    console.log(idx)
+  },
+
+
 })

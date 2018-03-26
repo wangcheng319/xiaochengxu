@@ -1,0 +1,21 @@
+<!--pages/listitem/listitem.wxml-->
+
+<view class='item_main' >
+  <image src='{{url}}' class='item_img'>
+  
+  </image>
+
+  <view class='item_right'>
+    <view class='item_right_top'>
+      <text class='item_right_top_text1'>{{text1}}</text>
+      <text class='item_right_top_text1'>{{text2}}</text>
+      <text class='item_right_top_text1'>{{text3}}</text>
+
+      <view class='item_right_bottom'>
+        <text class='item_right_bottom_text'>{{text4}}</text>
+        <text class='item_right_bottom_text'>{{text5}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>
