@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view>
+  <view class='name_lable'>
+    <text class='name_text'>用户名：</text>
+    <input class='name_input' bindinput='inputvalue' value='请输入用户名' maxlength='5'></input>
+  </view>
+  <view class='passwd_lable'>
+    <text class='passwd_text'>密码：</text>
+    <input class='passwd_input' value='请输入密码'></input>
+  </view>
+ 
+  <image src='../images/test.png' class='img' ></image>
+
+  
+  
+  <button class='btn_login' bindtap='login'>点击登录</button>
+
+  <view>{{value}}</view>
+
+</view>

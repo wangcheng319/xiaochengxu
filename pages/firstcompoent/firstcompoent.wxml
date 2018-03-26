@@ -1,0 +1,4 @@
+<!--pages/firstcompoent/firstcompoent.wxml-->
+<text>this is the first component</text>
+
+<button bindtap='componentclick'>组件点击</button>
